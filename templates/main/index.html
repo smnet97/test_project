@@ -8,7 +8,7 @@
     </form>
     {% for i in books %}
         <div>
-            <h3>{{ i.name }}</h3>
+            <h3><a href="{% url 'detail' i.pk %}">{{ i.name }}</a></h3>
             <span>{{ i.price }}</span>
             <a href="{% url 'update' i.id %}">update</a>
         </div>
